@@ -9,8 +9,7 @@
 // Event handling, user interaction is what starts the code execution.
 
 var taskInput=document.getElementById("new-task");//Add a new task.
-// var addButton=document.getElementsByTagName("button")[0];//first button
-let addButton = document.querySelector(".task-wrapper__add-task-button");
+var addButton=document.getElementsByTagName("button")[0];//first button
 var incompleteTaskHolder=document.getElementById("incompleteTasks");//ul of #incompleteTasks
 var completedTasksHolder=document.getElementById("completed-tasks");//completed-tasks
 
@@ -42,9 +41,9 @@ var createNewTaskElement=function(taskString){
     editInput.className="task";
 
     editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
-    editButton.className="edit";
+    editButton.className="todo-item__button edit";
 
-    deleteButton.className="delete";
+    deleteButton.className="todo-item__button delete";
     deleteButtonImg.src='./remove.svg';
     deleteButton.appendChild(deleteButtonImg);
 
@@ -157,8 +156,11 @@ var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
     console.log("bind list item events");
 //select ListItems children
     var checkBox=taskListItem.querySelector("input[type=checkbox]");
+		console.log(checkBox)
     var editButton=taskListItem.querySelector("button.edit");
+		console.log(editButton)
     var deleteButton=taskListItem.querySelector("button.delete");
+		console.log(deleteButton)
 
 
     //Bind editTask to edit button.
