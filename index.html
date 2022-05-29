@@ -8,20 +8,20 @@
 	<title>Todo App</title>
 </head>
 <body>
-	<div class=" app-wrapper">
+	<main class=" app-wrapper">
 		<!----------------------intro block -->
-		<div class="block-intro">
+		<aside class="block-intro">
 			<img class= "block-intro__matrix-img" src="./eisenhower-matrix.jpg">
 			<a class="block-intro__more-info"
 				href="https://goal-life.com/page/method/matrix-eisenhower">
 				Want more details?
 			</a>
-		</div>
+		</aside>
 		<!------------------------todo app -->
 		<!-- replace with article tag -->
-		<div class="todo-block">
+		<article class="todo-block">
 			<!-- replace with section tag -->
-			<p class="todo-form">
+			<section class="todo-form">
 				<label for="new-task" class="todo-form__title">
 					Add Item
 				</label>
@@ -33,11 +33,11 @@
 						Add
 					</button>
 				</div>
-			</p>
+			</section>
 
 			<h3 class="section-title"> Todo </h3>
 			<!-- replace div with section tag -->
-			<div class="new-todo-task-block">
+			<section class="new-todo-task-block">
 				<ul id="incompleteTasks" class="todo-task-list">
 					<li class="todo-item">
 						<input 
@@ -73,10 +73,10 @@
 							</button>
 					</li>
 				</ul>
-		  </div>
+		  </section>
 	
 			<h3 class="section-title"> Completed </h3>
-			<div class="complete-todo-task">
+			<section class="complete-todo-task">
 				<ul class=" completed-tasks todo-task-list">
 					<li class="todo-item">
 						<input 
@@ -95,16 +95,10 @@
 							<img class="todo-item__remove-svg" src="./remove.svg">
 						</button>
 					</li> 
-
 				</ul>
-
-			</div>
-
-		</div>
-
-	</div>
-
+			</section>
+		</article>
+	</main>
 </body>
-
 <script type="text/javascript" src="app.js"></script>
 </html>
