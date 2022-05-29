@@ -47,7 +47,8 @@ var createNewTaskElement=function(taskString){
     editButton.className="todo-item__button edit";
 
     deleteButton.className="todo-item__button delete";
-    deleteButtonImg.src='./remove.svg';
+		deleteButton.alt = "Interactive button for deleting completed tasks";
+    deleteButtonImg.src='./assets/remove.svg';
 		deleteButtonImg.classList.add("todo-item__remove-svg");
     deleteButton.appendChild(deleteButtonImg);
 
