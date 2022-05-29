@@ -29,13 +29,13 @@
 					<input id="new-task"
 						class="task-wrapper__task-input"
 						type="text">
-					<button class="task-wrapper__add-task-button ">
+					<button class="task-wrapper__add-task-button">
 						Add
 					</button>
 				</div>
 			</p>
 
-			<h3 class="section-title">Todo</h3>
+			<h3 class="section-title"> Todo </h3>
 			<!-- replace div with section tag -->
 			<div class="new-todo-task-block">
 				<ul id="incompleteTasks" class="todo-task-list">
@@ -43,7 +43,7 @@
 						<input 
 							type="checkbox"
 							class="todo-item__checkbox">
-						<label class="task ">
+						<label class="todo-item__task-content ">
 							Pay Bills
 						</label>
 						<input type="text" 
@@ -52,13 +52,15 @@
 							Edit
 						</button>
 						<button class="todo-item__button delete">
-							<img class="todo-item__remove-png" src="./remove.svg">
+							<img class="todo-item__remove-svg" src="./remove.svg">
 						</button>
 					</li>
 
-					<li class="todo-task-list__item editMode">
-							<input type="checkbox">
-							<label class="task">
+					<li class="todo-item edit-mode">
+							<input 
+							  type="checkbox"
+								class="todo-item__checkbox">
+							<label class="todo-item__task-content">
 								Go Shopping
 							</label>
 							<input 
@@ -67,17 +69,21 @@
 								class="task todo-item__input">
 							<button class="todo-item__button edit">Save</button>
 							<button class="todo-item__button delete">
-								<img src="./remove.svg">
+							  <img class="todo-item__remove-svg" src="./remove.svg">
 							</button>
 					</li>
 				</ul>
 		  </div>
 	
-			<h3 class="section-title">Completed</h3>
-			<ul id="completed-tasks" class="todo-task-list complited-list">
-					<li>
-						<input type="checkbox" checked>
-						<label class="task">
+			<h3 class="section-title"> Completed </h3>
+			<div class="complete-todo-task">
+				<ul class=" completed-tasks todo-task-list">
+					<li class="todo-item">
+						<input 
+						    type="checkbox"
+								class="todo-item__checkbox"
+								checked>
+						<label class="todo-item__task-content">
 							See the Doctor
 						</label>
 						<input type="text"
@@ -86,16 +92,19 @@
 							Edit
 						</button>
 						<button class="todo-item__button delete">
-							<img src="./remove.svg">
+							<img class="todo-item__remove-svg" src="./remove.svg">
 						</button>
-					</li>
-			</ul>
+					</li> 
+
+				</ul>
+
+			</div>
+
 		</div>
 
 	</div>
 
-  
-
 </body>
+
 <script type="text/javascript" src="app.js"></script>
 </html>
