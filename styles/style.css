@@ -40,22 +40,22 @@
 .task-wrapper__task-input{
 	width: 56%;
 	display: inline-block;
-	flex-grow: 1
+	flex-grow: 1;
 }
 
 .todo-task-list {
-	margin:0;
+	margin: 0;
 	padding: 0px;
 }
 
 .todo-item,
 .section-title {
-	list-style:none;
+	list-style: none;
 }
 
 .todo-button,
 .todo-item__button {
-	outline:none;
+	outline: none;
 }
 
 .task-wrapper__add-task-button,
@@ -70,7 +70,7 @@
 }
 
 .todo-button:hover {
-	color: #3a3A3a;
+	color: #3a3a3a;
 }
 /* Heading */
 
@@ -148,10 +148,10 @@
 /* Edit Task */
 
 .edit-mode .todo-item__input {
-	display:inline-block;
-	width:224px;
+	display: inline-block;
+	width: 224px;
 }
 
 .edit-mode .todo-item__task-content {
-	display:none;
+	display: none;
 }
