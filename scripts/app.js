@@ -43,7 +43,7 @@ var createNewTaskElement = function (taskString) {
   editButton.className = "button task__edit-button";
 
   deleteButton.className = "button task__remove-button";
-  deleteButtonImg.src = "./remove.svg";
+  deleteButtonImg.src = "./assets/remove.svg";
   deleteButton.appendChild(deleteButtonImg);
 
   //and appending.
@@ -55,7 +55,8 @@ var createNewTaskElement = function (taskString) {
   return listItem;
 };
 
-var addTask = function () {
+var addTask = function (e) {
+  e.preventDefault();
   console.log("Add Task...");
   //Create a new list item with the text from the #new-task:
   if (!taskInput.value) return;
@@ -66,6 +67,7 @@ var addTask = function () {
   bindTaskEvents(listItem, taskCompleted);
 
   taskInput.value = "";
+  ajaxRequest();
 };
 
 //Edit an existing task.
@@ -134,7 +136,6 @@ var ajaxRequest = function () {
 //Set the click handler to the addTask function.
 // addButton.onclick=addTask; // remove
 addButton.addEventListener("click", addTask);
-addButton.addEventListener("click", ajaxRequest);
 
 var bindTaskEvents = function (taskListItem, checkBoxEventHandler) {
   console.log("bind list item events");
