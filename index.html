@@ -1,113 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700"
-	  rel="stylesheet">
-	<link rel="stylesheet" href="./styles/style.css" >
-	<title>Todo App</title>
+  <title>Todo App</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/style.css" media="screen" charset="utf-8">
 </head>
 <body>
-	<main class=" app-wrapper">
-		<!----------------------intro block -->
-		<aside class="block-intro">
-			<img class= "block-intro__matrix-img"
-			  src="./assets/eisenhower-matrix.jpg" 
-				alt=" image eisenhower matrix">
-			<a class="block-intro__more-info"
-				href="https://goal-life.com/page/method/matrix-eisenhower">
-				  Want more details?
-			</a>
-		</aside>
-		<!------------------------todo app -->
-		<!-- replace with article tag -->
-		<article class="todo-block">
-			<!-- replace with section tag -->
-			<section class="todo-form">
-				<label for="new-task" class="todo-form__title">
-					Add Item
-				</label>
-				<div class="task-wrapper">
-					<input id="new-task"
-						class="task-wrapper__task-input"
-						type="text">
-					<button class="task-wrapper__add-task-button">
-						Add
-					</button>
-				</div>
-			</section>
-
-			<h3 class="section-title"> Todo </h3>
-			<!-- replace div with section tag -->
-			<section class="new-todo-task-block">
-				<ul id="incompleteTasks" class="todo-task-list">
-					<li class="todo-item">
-						<input 
-							type="checkbox"
-							class="todo-item__checkbox">
-						<label class="todo-item__task-content ">
-							Pay Bills
-						</label>
-						<input type="text" 
-								class="task todo-item__input">
-						<button class="todo-item__button edit">
-							Edit
-						</button>
-						<button class="todo-item__button delete">
-							<img class="todo-item__remove-svg"
-							 	  src="./assets/remove.svg"
-								  alt="Interactive button for deleting completed tasks">
-						</button>
-					</li>
-
-					<li class="todo-item edit-mode">
-							<input 
-							  type="checkbox"
-								class="todo-item__checkbox">
-							<label class="todo-item__task-content">
-								Go Shopping
-							</label>
-							<input 
-								type="text" 
-								value="Go Shopping"
-								class="task todo-item__input">
-							<button class="todo-item__button edit">Save</button>
-							<button class="todo-item__button delete">
-							  <img class="todo-item__remove-svg"
-								 	  src="./assets/remove.svg"
-									  alt="Interactive button for deleting completed tasks">
-							</button>
-					</li>
-				</ul>
-		  </section>
-	
-			<h3 class="section-title"> Completed </h3>
-			<section class="complete-todo-task">
-				<ul class=" completed-tasks todo-task-list">
-					<li class="todo-item">
-						<input 
-						    type="checkbox"
-								class="todo-item__checkbox"
-								checked>
-						<label class="todo-item__task-content">
-							See the Doctor
-						</label>
-						<input type="text"
-						  class="task todo-item__input">
-						<button class="todo-item__button edit">
-							Edit
-						</button>
-						<button class="todo-item__button delete">
-							<img class="todo-item__remove-svg"
-							 	  src="./assets/remove.svg"
-								  alt="Interactive button for deleting completed tasks">
-						</button>
-					</li> 
-				</ul>
-			</section>
-		</article>
-	</main>
+  <section class="info-block">
+    <img src="./assets/eisenhower-matrix.jpg" alt="eisenhower-matrix" >
+    <a class="info-block__more" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?
+    </a>
+  </section>
+  <section class="container">
+    <form class="task-form">
+      <label class="task-form__label" for="task-form__input">Add Item</label>
+      <div class="task-row-wrapper">
+        <input id="task-form__input" class="task-form__input" type="text">
+        <button class="button">Add</button>
+      </div>
+    </form>
+    <h3 class="tasks-list__title">Todo</h3>
+    <ul id="uncomplete-tasks" class="uncomplete-tasks-list">
+      <li class="task">
+        <input type="checkbox" class="task__checkbox">
+        <label class="task__content">Pay Bills</label>
+        <input type="text" class="task__input">
+        <button class="button task__edit-button">Edit</button>
+        <button class="button task__remove-button">
+          <img src="./assets/remove.svg" alt="remove-button">
+        </button>
+      </li>
+      <li class="task edit-mode">
+        <input type="checkbox" class="task__checkbox">
+        <label class="task__content">Go Shopping</label>
+        <input
+        type="text"
+        value="Go Shopping"
+        class="task__input">
+        <button class="button task__edit-button">Save</button>
+        <button class="button task__remove-button">
+          <img src="./assets/remove.svg" alt="remove-button">
+        </button>
+      </li>
+    </ul>
+    <h3 class="tasks-list__title">Completed</h3>
+    <ul id="completed-tasks" class="complete-tasks-list">
+      <li class="task">
+        <input class="task__checkbox" type="checkbox" checked>
+        <label class="task__content">See the Doctor</label>
+        <input type="text" class="task__input">
+        <button class="button task__edit-button">Edit</button>
+        <button class="button task__remove-button">
+          <img src="./assets/remove.svg" alt="remove-button">
+        </button>
+      </li>
+    </ul>
+  </sec>
+<script src="./scripts/app.js"></script>
 </body>
 <script src="./scripts/app.js"></script>
 </html>
