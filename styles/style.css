@@ -1,0 +1,157 @@
+/* Basic Style */
+body {
+  background-color: #f8f8f8;
+  color: #333;
+  font-family: Lato, sans-serif;
+}
+
+.info-block {
+  width: 500px;
+  margin: 0 auto;
+  display: block;
+  text-align: right;
+  font-family: fantasy, cursive;
+}
+
+.info-block img {
+  width: 100%;
+}
+
+
+@media (max-width: 768px) {
+
+  .aaa {
+    text-align: center;
+  }
+
+}
+
+.container {
+  display: block;
+  width: 500px;
+  margin: 0 auto 0;
+}
+
+.task-row-wrapper {
+  display: flex;
+}
+
+.complete-tasks-list,
+.uncomplete-tasks-list {
+  margin: 0;
+  padding: 0px;
+}
+
+.tasks-list__title,
+.task {
+  list-style: none;
+}
+
+.button,
+.task-form__input,
+.task__input  {
+  outline: none;
+}
+
+.button {
+  background: none;
+  border: 0px;
+  color: #888;
+  font-size: 15px;
+  width: 60px;
+  font-family: Lato, sans-serif;
+  cursor: pointer;
+}
+
+.button:hover {
+  color: #3a3a3a;
+}
+
+/* Heading */
+.tasks-list__title,
+.task-form__label {
+  display: block;
+  color: #333;
+  font-weight: 700;
+  font-size: 15px;
+  border-bottom: 2px solid #333;
+  padding: 30px 0 10px;
+  margin: 0 0 20px;
+  text-transform: uppercase;
+}
+
+.task-form__input,
+.task__input {
+  width: 56%;
+  display: inline-block;
+  flex-grow: 1;
+  margin: 0;
+  font-size: 18px;
+  line-height: 18px;
+  height: 21px;
+  padding: 0 9px;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 6px;
+  font-family: Lato, sans-serif;
+  color: #888;
+}
+.task-form__input {
+  width: 318px;
+}
+
+.task__input:focus,
+.task-form__input:focus {
+  color: #333;
+}
+
+/* Task list */
+.task {
+  overflow: hidden;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.task__checkbox {
+  margin: 0 10px;
+}
+
+.task__content {
+  width: 56%;
+  display: inline-block;
+  flex-grow: 1;
+  padding-left: 10px;
+  box-sizing: border-box;
+  font-size: 18px;
+  width: 226px;
+}
+
+.task__input {
+  width: 226px;
+  display: none;
+}
+
+.button.task__remove-button img {
+  height: 2em;
+  transform: rotateZ(45deg);
+  transition: transform 200ms ease-in;
+}
+
+.button.task__remove-button img:hover {
+  transform: rotateZ(0);
+}
+
+/* Completed */
+
+.edit-mode .task__input {
+  display: inline-block;
+  width: 224px;
+}
+
+.edit-mode .task__content{
+  display: none;
+}
