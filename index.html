@@ -6,19 +6,19 @@
   <link rel="stylesheet" href="style.css" media="screen" charset="utf-8">
 </head>
 <body>
-  <div class="info-block">
-    <img src="./eisenhower-matrix.jpg" alt="eisenhower-matrix" >
+  <section class="info-block">
+    <img src="./assets/eisenhower-matrix.jpg" alt="eisenhower-matrix" >
     <a class="info-block__more" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?
     </a>
-  </div>
-  <div class="container">
-    <p class="task-form">
+  </section>
+  <section class="container">
+    <form class="task-form">
       <label class="task-form__label" for="task-form__input">Add Item</label>
       <div class="task-row-wrapper">
         <input id="task-form__input" class="task-form__input" type="text">
         <button class="button">Add</button>
       </div>
-    </p>
+    </form>
     <h3 class="tasks-list__title">Todo</h3>
     <ul id="uncomplete-tasks" class="uncomplete-tasks-list">
       <li class="task">
@@ -27,7 +27,7 @@
         <input type="text" class="task__input">
         <button class="button task__edit-button">Edit</button>
         <button class="button task__remove-button">
-          <img src="./remove.svg" alt="remove-button">
+          <img src="./assets/remove.svg" alt="remove-button">
         </button>
       </li>
       <li class="task edit-mode">
@@ -39,7 +39,7 @@
         class="task__input">
         <button class="button task__edit-button">Save</button>
         <button class="button task__remove-button">
-          <img src="./remove.svg" alt="remove-button">
+          <img src="./assets/remove.svg" alt="remove-button">
         </button>
       </li>
     </ul>
@@ -51,11 +51,11 @@
         <input type="text" class="task__input">
         <button class="button task__edit-button">Edit</button>
         <button class="button task__remove-button">
-          <img src="./remove.svg" alt="remove-button">
+          <img src="./assets/remove.svg" alt="remove-button">
         </button>
       </li>
     </ul>
-  </div>
-<script src="app.js"></script>
+  </sec>
+<script src="./scripts/app.js"></script>
 </body>
 </html>
